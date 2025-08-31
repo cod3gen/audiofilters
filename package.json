@@ -1,6 +1,6 @@
 {
   "name": "@cod3gen/audiofilters",
-  "version": "0.1.1",
+  "version": "0.1.2",
   "description": "Audio filter design utilities (biquad PEQ/shelves, crossover families, RIAA) for Node.js",
   "type": "module",
   "main": "dist/index.cjs",
