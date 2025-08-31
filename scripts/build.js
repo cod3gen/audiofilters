@@ -4,7 +4,7 @@ import { readFile, writeFile, mkdir } from 'fs/promises';
 import { resolve, dirname } from 'path';
 
 const root = resolve(process.cwd());
-const src = resolve(root, 'src/index.ts');
+const src = resolve(root, 'src/index.js');
 const outdir = resolve(root, 'dist');
 
 await mkdir(outdir, { recursive: true });
@@ -26,7 +26,7 @@ const cjsPath = resolve(outdir, 'index.cjs');
 const shim = `module.exports = require('node:module').createRequire(__filename)('./index.js');`;
 await writeFile(cjsPath, shim);
 
-// Generate a basic d.ts by copying inline JSDoc from TS build (if using TS). Here, emit a minimal hand-rolled type.
+// Generate a basic d.ts (hand-rolled minimal types for consumers)
 const dts = `
 export interface BiquadCoefficients { a0: number; a1: number; a2: number; b0: number; b1: number; b2: number }
 export type StagedCoefficients = Record<number, BiquadCoefficients>
