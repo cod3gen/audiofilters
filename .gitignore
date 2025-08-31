@@ -1,0 +1,16 @@
+# Node
+node_modules/
+
+# Build outputs
+/dist/
+*.map
+
+# Logs
+npm-debug.log*
+yarn-debug.log*
+yarn-error.log*
+
+# OS/Editor
+.DS_Store
+Thumbs.db
+.vscode/

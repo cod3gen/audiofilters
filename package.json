@@ -1,0 +1,40 @@
+{
+  "name": "@cod3gen/audiofilters",
+  "version": "0.1.0",
+  "description": "Audio filter design utilities (biquad PEQ/shelves, crossover families, RIAA) for Node.js",
+  "type": "module",
+  "main": "dist/index.cjs",
+  "module": "dist/index.js",
+  "types": "dist/index.d.ts",
+  "exports": {
+    ".": {
+      "import": "./dist/index.js",
+      "require": "./dist/index.cjs",
+      "types": "./dist/index.d.ts"
+    }
+  },
+  "files": [
+    "dist"
+  ],
+  "scripts": {
+    "build": "node ./scripts/build.js",
+    "dev": "node ./scripts/build.js --watch",
+    "demo": "node ./demo/demo.js",
+    "prepublishOnly": "npm run build"
+  },
+  "keywords": ["audio", "dsp", "biquad", "filters", "peq", "linkwitz-riley", "butterworth", "bessel", "riaa"],
+  "author": "",
+  "license": "MIT",
+  "repository": {
+    "type": "git",
+    "url": "git+https://github.com/cod3gen/audiofilters.git"
+  },
+  "bugs": {
+    "url": "https://github.com/cod3gen/audiofilters/issues"
+  },
+  "homepage": "https://github.com/cod3gen/audiofilters#readme",
+  "devDependencies": {
+    "esbuild": "^0.21.5",
+    "typescript": "^5.5.4"
+  }
+}
